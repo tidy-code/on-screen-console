@@ -8,11 +8,11 @@
     <body>
         <script src="index.js"></script>
         <script>
-            dsl({ test: 123, test2: "test" });
-            dsl(function funnyFunction() {});
+            log({ test: 123, test2: "test" });
+            log(function funnyFunction() {});
         </script>
         <script>
-            console.log("shake detector");
+            console.log("if you don't bind to console.log");
             throw new Error("az ghasd");
         </script>
     </body>

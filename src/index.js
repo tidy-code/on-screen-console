@@ -1,6 +1,5 @@
 const parseURL = require("./helpers/parseURL");
 const log = require("./log");
-const dsl = require("./deadSimpleLog.js");
 const { wrapper } = require("./components/wrapper");
 
 document.body.appendChild(wrapper);
@@ -31,4 +30,3 @@ if (loadedWithQueries) {
 
 window.log = log;
 window.Log = log;
-window.dsl = dsl;

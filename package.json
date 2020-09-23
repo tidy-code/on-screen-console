@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "start": "parcel ./src/index.html --port 9000",
-        "build": "parcel build ./src/index.js --out-dir build -o osc.js --no-source-maps",
-        "buildDSL": "parcel build ./src/deadSimpleLog.js --out-dir build -o dsl.js --no-source-maps"
+        "build-osc": "parcel build ./src/index.js --out-dir build -o osc.js --no-source-maps",
+        "build-dsl": "parcel build ./src/deadSimpleLog.js --out-dir build -o dsl.js --no-source-maps",
+        "build": "npm run build-osc && npm run build-dsl"
     },
     "keywords": [],
     "author": "",
