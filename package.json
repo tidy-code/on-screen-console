@@ -7,13 +7,17 @@
         "start": "parcel ./src/index.html --port 9000",
         "build-osc": "parcel build ./src/index.js --out-dir build -o osc.js --no-source-maps",
         "build-dsl": "parcel build ./src/deadSimpleLog.js --out-dir build -o dsl.js --no-source-maps",
-        "build": "npm run build-osc && npm run build-dsl"
+        "build": "npm run build-osc && npm run build-dsl && npm run minify",
+        "minify-osc": "uglifyjs ./build/osc.js -o ./build/osc.min.js  --compress --mangle",
+        "minify-dsl": "uglifyjs ./build/dsl.js -o ./build/dsl.min.js  --compress --mangle",
+        "minify": "npm run minify-osc && npm run minify-dsl"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "parcel-bundler": "^1.12.4"
+        "parcel-bundler": "^1.12.4",
+        "uglify-js": "^3.10.4"
     },
     "dependencies": {
         "dsl": "0.0.2",
