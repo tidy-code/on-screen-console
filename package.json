@@ -1,0 +1,21 @@
+{
+    "name": "on-screen-console",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "parcel ./src/index.html --port 9000",
+        "build": "parcel build ./src/index.js --out-dir build -o osc.js --no-source-maps",
+        "buildDSL": "parcel build ./src/deadSimpleLog.js --out-dir build -o dsl.js --no-source-maps"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "parcel-bundler": "^1.12.4"
+    },
+    "dependencies": {
+        "dsl": "0.0.2",
+        "log": "^6.0.0"
+    }
+}
