@@ -1,6 +1,5 @@
 const { wrapper, logWrapper } = require("./components/wrapper");
 const { replacer } = require("./deadSimpleLog");
-const dsl = require("./deadSimpleLog");
 const state = require("./state");
 const toast = require("./toast");
 
