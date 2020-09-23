@@ -5,7 +5,7 @@ this library helps with minimal console log and command execution on devices whi
 You can add script with this tag:
 
 ```html
-<script src="osc.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tidy-code/on-screen-console/build/osc.js"></script>
 ```
 
 after adding the script you can use the global `log()` function to log variables to osc panel
@@ -22,7 +22,8 @@ or with the help of a bookmarklet like so:
 
 ```javascript
 javascript: const script = document.createElement("script");
-script.src = "cdn/osc.js";
+script.src =
+    "https://cdn.jsdelivr.net/gh/tidy-code/on-screen-console/build/osc.js";
 document.body.appendChild(script);
 ```
 
@@ -34,7 +35,7 @@ you can load the script with these two options
 like so:
 
 ```html
-<script src="cdn/osc.js?bindConsole&bindError=false"></script>
+<script src="https://cdn.jsdelivr.net/gh/tidy-code/on-screen-console/build/osc.js?bindConsole&bindError=false"></script>
 ```
 
 ### `bindConsole`
@@ -44,3 +45,11 @@ this will bind `console.log` to the osc log function and after this all `console
 ### `bindError`
 
 this option will bind all errors happening after osc loaded to be outputted on osc panel
+
+### Dead simple log
+
+you can use `dsl.js` (Dead Simple Log) [~1KB] that it only appends errors and `dsl()` to the document.body;
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/tidy-code/on-screen-console/build/dsl.js"></script>
+```
